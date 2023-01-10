@@ -1,0 +1,65 @@
+body{
+  padding: 0;
+  margin:0;
+  font-family: "montserrat", sans-serif;
+  background: #F7F9FD;
+
+}
+
+.middle{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.taskList{
+  width: 150px;
+  padding: 40px;
+  background:url("https://images.unsplash.com/photo-1554050857-c84a8abdb5e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80");
+  background-size: cover;
+}
+
+.taskTitle{
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.task{
+  display: flex;
+  padding: 5px 0;
+  align-items: center;
+  cursor: pointer;
+}
+
+.task input{
+  position: absolute;
+  visibility: hidden;
+}
+
+.task i{
+  display: inline-block;
+  width: 2px;
+  height: 2px;
+  border-radius:50%;
+  border:1px solid #FFFFFF;
+  text-align: center;
+  line-height: 48px;
+  font-size: 20px;
+  margin-right: 14px;
+  color: transparent;
+}
+
+.text{
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+.task input: checked ~ i{
+  color: #e74c3c;
+}
+
+.task input:checked ~.text{
+  text-decoration:line-through;
+  color: #e74c3c;
+}
